@@ -21,9 +21,9 @@ skip = ['WebKit']
 
 # what directory should the source be checked out to?
 checkoutroot = '~/gnome-jhbuild/src'
-
-# the prefix to configure/install modules to (must have write access)
 prefix = '~/gnome-jhbuild/build'
+tarballdir = '~/gnome-jhbuild/tarballs'
+
 
 # custom CFLAGS / environment pieces for the build
 os.environ['CFLAGS'] = '-Wall -g -O0'

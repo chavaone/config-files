@@ -1,0 +1,13 @@
+
+
+
+[user]
+	name = Marcos Chavarría Teijeiro
+	email = chavarria1991@gmail.com
+
+[alias]
+	st = status -bs
+	lg = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+
+[core]
+	editor = vim

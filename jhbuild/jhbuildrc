@@ -16,7 +16,7 @@
 
 # Or to build the old GNOME 2.32:
 moduleset = 'gnome-world-3.10'
-modules = ['gtranslator','vala']
+modules = ['gtranslator','vala','gnome-terminal']
 skip = ['WebKit']
 
 # what directory should the source be checked out to?

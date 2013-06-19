@@ -1,0 +1,6 @@
+
+set nocompatible
+syntax on
+set number
+colorscheme slate
+set autoindent

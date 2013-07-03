@@ -1,0 +1,3 @@
+[submodule "xchat/solarized-colors"]
+	path = xchat/solarized-colors
+	url = https://github.com/jtmohr/xchat-colors-solarized

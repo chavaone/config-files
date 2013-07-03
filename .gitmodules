@@ -1,3 +1,6 @@
 [submodule "xchat/solarized-colors"]
 	path = xchat/solarized-colors
 	url = https://github.com/jtmohr/xchat-colors-solarized
+[submodule "terminal/colors-solarized"]
+	path = terminal/colors-solarized
+	url = https://github.com/sigurdga/gnome-terminal-colors-solarized.git

@@ -1,0 +1,5 @@
+
+#ssh aquelando.info
+alias aquelando='ssh root@aquelando.info'
+#open current dir
+alias op='gnome-open . > /dev/null 2> /dev/null &'

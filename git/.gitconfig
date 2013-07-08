@@ -15,6 +15,7 @@
 	st = status -bs
 	lg = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 	ca = commit -a
+	pom = push origin master
 
 [core]
 	quotepath = false

@@ -7,7 +7,7 @@
 
 
 [user]
-	name = Marcos Chavarría Teijeiro
+	name = Marcos Chavarría Teijeiro\n
 	email = chavarria1991@gmail.com
 	editor = vim
 
@@ -16,6 +16,7 @@
 	lg = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 	ca = commit -a
 	pom = push origin master
+	di = diff --cached
 
 [core]
 	quotepath = false

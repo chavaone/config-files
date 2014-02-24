@@ -1,5 +1,10 @@
 
 #ssh aquelando.info
 alias aquelando='ssh root@aquelando.info'
+#ssh gpul.org
+alias gpulino='ssh marcos.chavarria@gpul.org'
 #open current dir
 alias op='gnome-open . > /dev/null 2> /dev/null &'
+#enable IS (Integración de Sistemas) enviroment
+alias enableis='source ~/.config-files/zsh/is'
+alias disableis='source ~/.config-files/zsh/is2'

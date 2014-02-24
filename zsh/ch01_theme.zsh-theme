@@ -13,9 +13,9 @@ GIT_PROMPT_SUFFIX="%{$fg[green]%}]%{$reset_color%}"
 GIT_PROMPT_AHEAD="%{$fg[red]%}ANUM%{$reset_color%}"
 GIT_PROMPT_BEHIND="%{$fg[cyan]%}BNUM%{$reset_color%}"
 GIT_PROMPT_MERGING="%{$fg_bold[magenta]%}⚡︎%{$reset_color%}"
-GIT_PROMPT_UNTRACKED="%{$fg[blue]%}●%{$reset_color%}"
-GIT_PROMPT_MODIFIED="%{$fg[green]%}●%{$reset_color%}"
-GIT_PROMPT_STAGED="%{$fg[red]%}●%{$reset_color%}"
+GIT_PROMPT_UNTRACKED="%{$fg[blue]%}U%{$reset_color%}"
+GIT_PROMPT_MODIFIED="%{$fg[green]%}M%{$reset_color%}"
+GIT_PROMPT_STAGED="%{$fg[red]%}S%{$reset_color%}"
 
 # Show Git branch/tag, or name-rev if on detached head
 parse_git_branch() {
@@ -43,18 +43,18 @@ parse_git_state() {
     GIT_STATE=$GIT_STATE$GIT_PROMPT_MERGING
   fi
 
-  if [[ -n $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
-    GIT_STATE=$GIT_STATE$GIT_PROMPT_UNTRACKED
+  if ! git diff --cached --quiet 2> /dev/null; then
+    GIT_STATE=$GIT_STATE$GIT_PROMPT_STAGED
   fi
 
   if ! git diff --quiet 2> /dev/null; then
     GIT_STATE=$GIT_STATE$GIT_PROMPT_MODIFIED
   fi
 
-  if ! git diff --cached --quiet 2> /dev/null; then
-    GIT_STATE=$GIT_STATE$GIT_PROMPT_STAGED
+  if [[ -n $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
+    GIT_STATE=$GIT_STATE$GIT_PROMPT_UNTRACKED
   fi
-
+ 
   if [[ -n $GIT_STATE ]]; then
     echo "$GIT_PROMPT_PREFIX$GIT_STATE$GIT_PROMPT_SUFFIX"
   fi

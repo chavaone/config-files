@@ -3,8 +3,13 @@
 setopt prompt_subst
 autoload -U colors && colors # Enable colors in prompt
 
-PROMPT="%{$fg[red]%}%n%{$reset_color%}%{$fg[green]%}@%{$reset_color%}%{$fg[blue]%}%m %{$fg[yellow]%}%2~ %{$reset_color%}» "
-
+jhbuild_string() {
+  if [ $UNDER_JHBUILD ]; then
+    echo "%{$fg[green]%}(jh)%{$reset_color%}"
+  else
+    echo "%{$fg[green]%}@%{$reset_color%}"
+  fi
+}
 
 # Modify the colors and symbols in these variables as desired.
 GIT_PROMPT_SYMBOL=""
@@ -54,7 +59,7 @@ parse_git_state() {
   if [[ -n $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
     GIT_STATE=$GIT_STATE$GIT_PROMPT_UNTRACKED
   fi
- 
+
   if [[ -n $GIT_STATE ]]; then
     echo "$GIT_PROMPT_PREFIX$GIT_STATE$GIT_PROMPT_SUFFIX"
   fi
@@ -66,6 +71,9 @@ git_prompt_string() {
   local git_where="$(parse_git_branch)"
   [ -n "$git_where" ] && echo "$GIT_PROMPT_SYMBOL$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[yellow]%}${git_where#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
 }
+
+#Set the left prompt
+PROMPT="%{$fg[red]%}%n%{$reset_color%}$(jhbuild_string)%{$fg[blue]%}%m %{$fg[yellow]%}%2~ %{$reset_color%}» "
 
 # Set the right-hand prompt
 RPS1='$(git_prompt_string)'

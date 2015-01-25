@@ -8,3 +8,12 @@ alias op='gnome-open . > /dev/null 2> /dev/null &'
 #enable IS (Integración de Sistemas) enviroment
 alias enableis='source ~/.config-files/zsh/is'
 alias disableis='source ~/.config-files/zsh/is2'
+
+
+alias win="rdesktop -T 'Windows 7 FIC' -x -l -5  -u 'marcos.chavarria@windows.cc.fic.udc.es' -p "-"  -k es  -f 10.10.5.132"
+
+
+packettracer () {
+	LD_LIBRARY_PATH=$HOME/packettracer/PacketTracer601/lib $HOME/packettracer/PacketTracer601/bin/PacketTracer6
+
+}

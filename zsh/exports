@@ -1,0 +1,17 @@
+# PATH...
+export PATH=/opt/crosstool-ng/bin:$PATH
+export PATH=/home/ch01/bin:$PATH
+export PATH=/home/ch01/.local/bin:$PATH
+export PATH=/usr/sbin:$PATH
+export PATH=/usr/local/sbin:$PATH
+export PATH=/bin:$PATH
+export PATH=/usr/bin:$PATH
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/lib64/ccache:$PATH
+export PATH=/usr/local/heroku/bin:$PATH
+
+
+#ICECC
+export CCACHE_PREFIX=icecc
+export ICECC_VERSION="/home/ch01/.config/6c48aa868979e07dc22cbef1c0f1d03a.tar.gz"
+

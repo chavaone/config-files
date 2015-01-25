@@ -43,3 +43,9 @@
 	changed = green
 	untracked = cyan reverse
 	branch = magenta
+[bz-tracker "gnome"]
+	host = bugzilla.gnome.org
+	auth-user = chavarria1991@gmail.com
+[bz]
+	default-tracker = gnome
+	browser = chromium

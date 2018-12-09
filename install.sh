@@ -15,6 +15,8 @@ ln -s $CONFIGDIR/zsh/zshrc ~/.zshrc
 mv ~/.gitconfig ~/.gitconfig.old
 ln -s $CONFIGDIR/git/gitconfig ~/.gitconfig
 
-
+#Install vimrc
+mv ~/.vimrc ~/.vimrc.old
+ln -s $CONFIGDIR/vim/vimrc ~/.vimrc
 
 

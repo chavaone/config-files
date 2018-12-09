@@ -12,7 +12,9 @@ mv ~/.zshrc ~/.zshrc.old
 ln -s $CONFIGDIR/zsh/zshrc ~/.zshrc
 
 #Install gitconfig
+mv ~/.gitconfig ~/.gitconfig.old
 ln -s $CONFIGDIR/git/gitconfig ~/.gitconfig
+
 
 
 

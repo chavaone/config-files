@@ -4,3 +4,6 @@
 [submodule "terminal/colors-solarized"]
 	path = terminal/colors-solarized
 	url = https://github.com/sigurdga/gnome-terminal-colors-solarized.git
+[submodule "zsh/oh-my-zsh"]
+	path = zsh/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git

@@ -1,18 +1,26 @@
-
+" --------------------- CONFIGURACIÓN VUNDLE ------------------
 set nocompatible
-
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-set rtp+=~/.ch01-config/vim/vundle/
-call vundle#rc('~/.vim/bundle')
+set rtp+=~/.ch01-config/vim/Vundle.vim
+call vundle#begin('~/.vim/bundle/')
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'morhetz/gruvbox' " Esquema de cor
+
+Plugin 'airblade/vim-gitgutter' " Indicador de modificación para GIT
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 
+call vundle#end()
 filetype plugin indent on 
 
-
+" --------------------- CONFIGURACIÓN PROPIA ------------------
 syntax on
 set number
-colorscheme slate
+colorscheme gruvbox
 set autoindent
 

@@ -26,3 +26,8 @@ fi
 ln -s $CONFIGDIR/vim/vimrc ~/.vimrc
 
 
+#Install nvim
+if test -d ~/.config/nvim; then
+  mv ~/.config/nvim ~/.config/nvim.old
+fi
+ln -s $CONFIGDIR/nvim ~/.config/nvim

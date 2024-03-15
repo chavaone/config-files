@@ -40,7 +40,8 @@ wk.register({
       name = "Git",
       b = {"<cmd>Telescope git_branches<cr>", "Git branches"},
       o = { "<cmd>Telescope git_files<cr>", "Git files"},
-    }
+    },
+    u = {"<cmd>Telescope undo<cr>", "Undo Tree"},
   }
 }, { prefix = "<leader>"})
 -- }}}

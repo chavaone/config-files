@@ -56,6 +56,7 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim",
       "ahmedkhalf/project.nvim",
+      "debugloop/telescope-undo.nvim",
     },
     config = function()
       require "extensions.telescope"

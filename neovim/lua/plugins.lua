@@ -126,12 +126,13 @@ return {
   },
   -- }}}
 
-  -- Theme: Sonokai {{{
+  -- Theme: Gruvbox {{{
   {
-    "sainnhe/sonokai",
+    "ellisonleao/gruvbox.nvim",
     lazy = false,
+    priority = 1000,
     config = function ()
-      require "extensions.colorscheme.sonokai"
+      require "extensions.colorscheme.gruvbox"
     end
   },
   -- }}}

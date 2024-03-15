@@ -137,6 +137,20 @@ return {
   },
   -- }}}
 
+  -- Barbar {{{
+  {
+    "romgrk/barbar.nvim",
+    dependencies = {
+      "lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
+      "nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
+    },
+    init = function() vim.g.barbar_auto_setup = false end,
+    config = function ()
+      require "extensions.barbar"
+    end
+  },
+   --  }}}
+
 }
 
 -- vim:tabstop=2 shiftwidth=2 expandtab syntax=lua foldmethod=marker foldlevelstart=0 foldlevel=0

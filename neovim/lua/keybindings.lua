@@ -35,7 +35,7 @@ wk.register({
     b = {"<cmd>Telescope buffers<cr>", "Buffers"},
     q = {"<cmd>Telescope quickfix<cr>", "Quickfix list"},
     r = {"<cmd>Telescope resume<cr>", "Previous Telescope window"},
-    o = {"<cmd>Telescope find_files<CR>", "Find files"},
+    f = {"<cmd>Telescope file_browser<CR>", "File Browser"},
     g = {
       name = "Git",
       b = {"<cmd>Telescope git_branches<cr>", "Git branches"},

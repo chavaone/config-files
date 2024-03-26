@@ -151,7 +151,20 @@ return {
       require "extensions.barbar"
     end
   },
-   --  }}}
+    --  }}}
+
+  -- Dashboard {{{
+  {
+    "nvimdev/dashboard-nvim",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons"
+    },
+    event = 'VimEnter',
+    config = function()
+      require "extensions.dashboard"
+    end,
+  }
+  -- }}}
 
 }
 

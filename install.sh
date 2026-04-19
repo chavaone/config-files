@@ -1,9 +1,36 @@
-
-
 CONFIGDIR=~/.ch01-config
 
 #Download files
 git clone --recurse-submodules https://github.com/chavaone/config-files.git $CONFIGDIR
+
+#Install programs (COPR Repos)
+sudo dnf copr enable -y atim/lazygit
+sudo dnf copr enable -y che/nerd-fonts
+sudo dnf copr enable -y phracek/PyCharm
+
+#Install programs (DNF)
+sudo ndf install \
+  texstudio \
+  syncthing \
+  terminator \
+  vim \
+  nvim \
+  gimp \
+  inkscape \
+  pdfmod \
+  xournalpp \
+  gscan2pdf \
+  kdenlive \
+  nerd-fonts \
+  zsh \
+  lazygit
+
+sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+sudo flatpak install \
+  vlc \
+  spotify \
+  logseq \
+  krop
 
 #Install oh-my-zsh
 ln -s $CONFIGDIR/zsh/ch01_theme.zsh-theme $CONFIGDIR/zsh/oh-my-zsh/themes/
@@ -25,9 +52,8 @@ if test -f ~/.vimrc; then
 fi
 ln -s $CONFIGDIR/vim/vimrc ~/.vimrc
 
-
 #Install nvim
 if test -d ~/.config/nvim; then
   mv ~/.config/nvim ~/.config/nvim.old
 fi
-ln -s $CONFIGDIR/nvim ~/.config/nvim
+ln -s $CONFIGDIR/neovim ~/.config/nvim

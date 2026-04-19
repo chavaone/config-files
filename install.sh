@@ -9,7 +9,7 @@ sudo dnf copr enable -y che/nerd-fonts
 sudo dnf copr enable -y phracek/PyCharm
 
 #Install programs (DNF)
-sudo ndf install \
+sudo dnf install \
   texstudio \
   syncthing \
   terminator \
@@ -26,11 +26,10 @@ sudo ndf install \
   lazygit
 
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-sudo flatpak install \
-  vlc \
-  spotify \
-  logseq \
-  krop
+sudo flatpak install org.videolan.VLC/x86_64/stable
+sudo flatpak install app/com.spotify.Client/x86_64/stable
+sudo flatpak install app/com.logseq.Logseq/x86_64/stable
+sudo flatpak install app/com.github.arminstraub.krop/x86_64/stable
 
 #Install oh-my-zsh
 ln -s $CONFIGDIR/zsh/ch01_theme.zsh-theme $CONFIGDIR/zsh/oh-my-zsh/themes/
